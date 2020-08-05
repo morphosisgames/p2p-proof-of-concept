@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cjv-OY-2gd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Folders-->
+        <scene sceneID="gUd-ZQ-GbV">
+            <objects>
+                <viewController id="hxl-CE-YSm" customClass="FoldersViewController" customModule="FileStorageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RGH-kb-i1b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HD7-Gg-lvv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xXS-eB-rL1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Folders" id="lxr-qC-dT2">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="ksW-Fs-wWJ"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="I5h-4f-15t">
+                            <connections>
+                                <action selector="addFolderButtom:" destination="hxl-CE-YSm" id="pyH-mB-zr0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="HD7-Gg-lvv" id="0Bg-CZ-5IZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJc-cQ-CGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679.7101449275365" y="69.642857142857139"/>
+        </scene>
+        <!--Folder-->
+        <scene sceneID="lTY-7r-Cxn">
+            <objects>
+                <tableViewController id="dut-Zy-uoT" customClass="StoredInFolderTableViewController" customModule="FileStorageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wyv-tL-edA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8MD-wA-Tbx">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8MD-wA-Tbx" id="uDE-mm-2X2">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZXT-it-0xQ" kind="show" id="16V-eb-qbQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dut-Zy-uoT" id="tiI-0Y-yTS"/>
+                            <outlet property="delegate" destination="dut-Zy-uoT" id="Lwd-v0-lYf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Folder" id="IoS-bN-bNM">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Fhu-UN-tRr"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5g7-Rb-xFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3403" y="70"/>
+        </scene>
+        <!--Stored File-->
+        <scene sceneID="nWO-BW-bMJ">
+            <objects>
+                <viewController id="ZXT-it-0xQ" customClass="FolderFileViewController" customModule="FileStorageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Wp-8b-0k0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pYA-T8-ZsU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stored File" id="3q0-j5-LCK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbi-aR-bbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4096" y="70"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="VQD-5I-xdj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4gF-F7-52r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="WDR-x2-71R"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eXr-ph-nc1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hxl-CE-YSm" kind="relationship" relationship="rootViewController" id="Zlc-8n-hru"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyS-wa-oo5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="69.642857142857139"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="5Jm-zC-qge">
+            <objects>
+                <tableViewController id="Slg-jr-rrh" customClass="AllChatsTableViewController" customModule="FileStorageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T9i-CV-Esc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oFN-rr-e37">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oFN-rr-e37" id="Kxu-pR-iVu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rL0-LI-aUU" kind="show" id="Hqe-Kg-QvU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Slg-jr-rrh" id="Azv-4l-kt0"/>
+                            <outlet property="delegate" destination="Slg-jr-rrh" id="zG0-fJ-GL4"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="rgw-PM-rEK"/>
+                    <navigationItem key="navigationItem" title="Messages" id="XAO-lu-M0c">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="zA5-bg-CW7"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyH-Ld-eHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="819"/>
+        </scene>
+        <!--Name of Chat-->
+        <scene sceneID="cCW-dc-PVp">
+            <objects>
+                <viewController id="rL0-LI-aUU" customClass="InitialChatViewController" customModule="FileStorageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7t-5g-3hU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NJ8-Om-j2R"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Name of Chat" id="sGn-NA-8ki"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44S-qK-Bxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3403" y="819"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="acI-zN-Wlk">
+            <objects>
+                <navigationController id="eHl-Ng-1zh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Emx-CJ-F76"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zCr-io-jBT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Slg-jr-rrh" kind="relationship" relationship="rootViewController" id="C74-IT-5SM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYz-W9-84f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="819"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IQe-w9-zH6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Cjv-OY-2gd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FVq-J5-qsu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4gF-F7-52r" kind="relationship" relationship="viewControllers" id="6J9-j4-aSP"/>
+                        <segue destination="eHl-Ng-1zh" kind="relationship" relationship="viewControllers" id="0xu-N5-jMl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJn-xM-wAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="410"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
