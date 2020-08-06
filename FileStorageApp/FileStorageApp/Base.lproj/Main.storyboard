@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cjv-OY-2gd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cjv-OY-2gd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -28,7 +28,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="ksW-Fs-wWJ"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="I5h-4f-15t">
                             <connections>
-                                <action selector="addFolderButtom:" destination="hxl-CE-YSm" id="pyH-mB-zr0"/>
+                                <action selector="addFolderButton:" destination="hxl-CE-YSm" id="xA8-UL-XcY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
