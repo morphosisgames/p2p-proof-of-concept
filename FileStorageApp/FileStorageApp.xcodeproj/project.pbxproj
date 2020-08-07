@@ -18,6 +18,9 @@
 		7420733624D074D400621D1B /* AllChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7420733524D074D400621D1B /* AllChatsTableViewController.swift */; };
 		7420733824D074F900621D1B /* InitialChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7420733724D074F900621D1B /* InitialChatViewController.swift */; };
 		7420733C24D30F9F00621D1B /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7420733B24D30F9F00621D1B /* FoldersViewController.swift */; };
+		81AF734924DE06820001C140 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF734824DE06820001C140 /* Stop.swift */; };
+		81AF734C24DE07410001C140 /* AppFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF734B24DE07410001C140 /* AppFileHelper.swift */; };
+		81AF734E24DE07E30001C140 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF734D24DE07E30001C140 /* Directory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		7420733524D074D400621D1B /* AllChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChatsTableViewController.swift; sourceTree = "<group>"; };
 		7420733724D074F900621D1B /* InitialChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialChatViewController.swift; sourceTree = "<group>"; };
 		7420733B24D30F9F00621D1B /* FoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
+		81AF734824DE06820001C140 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		81AF734B24DE07410001C140 /* AppFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFileHelper.swift; sourceTree = "<group>"; };
+		81AF734D24DE07E30001C140 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +56,10 @@
 		7420730D24CF1E6000621D1B = {
 			isa = PBXGroup;
 			children = (
+				81AF734A24DE07230001C140 /* Utilities */,
 				7420733024CF220800621D1B /* Views */,
 				7420731824CF1E6000621D1B /* FileStorageApp */,
+				81AF734724DE064E0001C140 /* Voodoo */,
 				7420731724CF1E6000621D1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +98,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		81AF734724DE064E0001C140 /* Voodoo */ = {
+			isa = PBXGroup;
+			children = (
+				81AF734824DE06820001C140 /* Stop.swift */,
+			);
+			path = Voodoo;
+			sourceTree = "<group>";
+		};
+		81AF734A24DE07230001C140 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				81AF734B24DE07410001C140 /* AppFileHelper.swift */,
+				81AF734D24DE07E30001C140 /* Directory.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,7 +143,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = "Damian Lopez";
+				ORGANIZATIONNAME = "Morphosis Games";
 				TargetAttributes = {
 					7420731524CF1E6000621D1B = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -163,12 +188,15 @@
 			files = (
 				7420733424CF229B00621D1B /* FolderFileViewController.swift in Sources */,
 				7420733624D074D400621D1B /* AllChatsTableViewController.swift in Sources */,
+				81AF734924DE06820001C140 /* Stop.swift in Sources */,
 				7420733824D074F900621D1B /* InitialChatViewController.swift in Sources */,
+				81AF734E24DE07E30001C140 /* Directory.swift in Sources */,
 				7420732424CF1E6000621D1B /* FileStorageApp.xcdatamodeld in Sources */,
 				7420733C24D30F9F00621D1B /* FoldersViewController.swift in Sources */,
 				7420731A24CF1E6000621D1B /* AppDelegate.swift in Sources */,
 				7420733224CF226D00621D1B /* StoredInFolderTableViewController.swift in Sources */,
 				7420731C24CF1E6000621D1B /* SceneDelegate.swift in Sources */,
+				81AF734C24DE07410001C140 /* AppFileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
