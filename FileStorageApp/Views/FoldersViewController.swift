@@ -57,6 +57,30 @@ class FoldersViewController: UIViewController {
                     return
             }
             self.save(name: nameToSave)
+            
+            
+            
+            // TEST >>
+            // This is test code to make sure everything is working and to demo how the code can be used.
+        
+            // Where we want to start scanning content
+            let docs = AppFileHelper.getDocument()
+            
+            // Create a text file
+            try! AppFileHelper.createFileWith(text: "Hello World!", at: docs, name: "default.txt")
+            
+            // Create a folder with the passed in name
+            try! AppFileHelper.createFolder(at: docs, name: nameToSave)
+            
+            // Create our folder scanner.  NOTE: I would have used the name Folder, but that was already taken by the CoreData object.
+            let root = try! Directory(at: docs);
+            
+            // Print out some information
+            print("For Directory at: \(root.at). \n Number of items in directory: \(root.entries.count)")
+            // << TEST
+            
+            
+            
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
